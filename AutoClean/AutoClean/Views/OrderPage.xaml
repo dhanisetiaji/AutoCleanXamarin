@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Order Page"
+             x:Class="AutoClean.Views.OrderPage">
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0" Grid.Row="0">
+
+
+                <!-- <Label Text="@XamarinGuy"/> -->
+                <!-- <Image Source="mediaw.png" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0"/> -->
+
+            </StackLayout>
+
+            <Grid Grid.Row="1" Margin="20,0,20,0">
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <StackLayout>
+                    <Frame CornerRadius="20"
+                           Padding="0"
+                           IsClippedToBounds="True">
+                        <Image Source="auto.png" 
+                               HorizontalOptions="Center"
+                               VerticalOptions="End" HeightRequest="90"/>
+                    </Frame>
+                </StackLayout>
+                <Entry Grid.Row="1" Placeholder="Nomor Pesanan" PlaceholderColor="#bababa" x:Name="txtPersonId" FontSize="16"/>
+                <Entry Grid.Row="2" Placeholder="Nama User" PlaceholderColor="#bababa" x:Name="txtName" FontSize="16"/>
+                <Entry Grid.Row="3" Placeholder="Jenis Kendaraan" PlaceholderColor="#bababa" x:Name="txtJenis" FontSize="16"/>
+                <Entry Grid.Row="4" Placeholder="Harga" PlaceholderColor="#bababa" x:Name="txtHarga" FontSize="16"/>
+                <Button Text="Tambah" x:Name="btnAdd" BackgroundColor="#3897f0" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="5" Clicked="BtnAdd_Clicked"/>
+                <Label Text="*Isi Data dengan Benar" HorizontalOptions="Center" Grid.Row="6" Margin="0,10,0,0" FontSize="12"/>
+            </Grid>
+        </Grid>
+
+
+
+    </ContentPage.Content>
+</ContentPage>

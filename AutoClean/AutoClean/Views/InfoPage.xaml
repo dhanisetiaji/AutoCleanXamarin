@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Detail Order"
+             x:Class="AutoClean.Views.InfoPage">
+    <ContentPage.Content>
+    <Grid BackgroundColor="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="20,0,20,0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+            
+            <Label Text="Data Order :" HorizontalOptions="Start" Grid.Row="1" Margin="0,10,0,0" FontSize="15"/>
+            <StackLayout Grid.Row="2">
+                <ListView x:Name="lstPersons">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                                        <Label Text="{Binding PersonId}"></Label>
+                                        <Label Text="{Binding Name}"></Label>
+                                        <Label Text="{Binding Jenis}"></Label>
+                                        <Label Text="{Binding Harga}"></Label>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </Grid>
+        </Grid>
+
+
+
+        </ContentPage.Content>
+</ContentPage>
